@@ -1,0 +1,85 @@
+{
+  "plots": [
+    {
+      "id": 1,
+      "image": "https://via.placeholder.com/600x400?text=Plot+1",
+      "location": "Green Valley",
+      "area_sq_yards": 500,
+      "area_acres": 0.103,
+      "price": 150000,
+      "venture": "Sunrise Meadows",
+      "status": "Ongoing",
+      "description": "A scenic plot overlooking a green valley, near township amenities."
+    },
+    {
+      "id": 2,
+      "image": "https://via.placeholder.com/600x400?text=Plot+2",
+      "location": "Lakeview",
+      "area_sq_yards": 1000,
+      "area_acres": 0.207,
+      "price": 320000,
+      "venture": "Lakefront Villas",
+      "status": "New",
+      "description": "Prime lakeside plot, ideal for luxury villas and quiet living."
+    },
+    {
+      "id": 3,
+      "image": "https://via.placeholder.com/600x400?text=Plot+3",
+      "location": "Hilltop",
+      "area_sq_yards": 750,
+      "area_acres": 0.155,
+      "price": 210000,
+      "venture": "Hillcrest",
+      "status": "Upcoming",
+      "description": "Elevated plots with panoramic views. Limited launch release."
+    },
+    {
+      "id": 4,
+      "image": "https://via.placeholder.com/600x400?text=Plot+4",
+      "location": "Green Valley",
+      "area_sq_yards": 300,
+      "area_acres": 0.062,
+      "price": 90000,
+      "venture": "Sunrise Meadows",
+      "status": "Ongoing",
+      "description": "Smaller, affordable plot suitable for compact homes."
+    },
+    {
+      "id": 5,
+      "image": "https://via.placeholder.com/600x400?text=Plot+5",
+      "location": "Riverside",
+      "area_sq_yards": 2000,
+      "area_acres": 0.414,
+      "price": 650000,
+      "venture": "Riverside Estates",
+      "status": "New",
+      "description": "Expansive river-facing plots in a gated community."
+    }
+  ],
+  "ventures": [
+    {
+      "name": "Sunrise Meadows",
+      "location": "Green Valley",
+      "status": "Ongoing",
+      "description": "Family-friendly development with parks and community centers."
+    },
+    {
+      "name": "Lakefront Villas",
+      "location": "Lakeview",
+      "status": "New",
+      "description": "Luxury lakeside living with private docks and promenades."
+    },
+    {
+      "name": "Hillcrest",
+      "location": "Hilltop",
+      "status": "Upcoming",
+      "description": "Premium elevated plots with spectacular sunrise views."
+    },
+    {
+      "name": "Riverside Estates",
+      "location": "Riverside",
+      "status": "New",
+      "description": "Spacious estate plots along the riverbank."
+    }
+  ]
+}
