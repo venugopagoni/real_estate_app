@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Landify — Buy & Sell Plots</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#">Landify</a>
+      <nav class="nav-menu">
+        <a href="#buy">Buy Plot</a>
+        <a href="#sell">Sell Plot</a>
+        <a href="#search">Search Plot</a>
+        <a href="#ventures">Ventures</a>
+      </nav>
+      <button class="cta">Contact</button>
+    </div>
+  </header>
+
+  <!-- Hero / Home options -->
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1>Find the perfect plot of land</h1>
+          <p>Buy, sell and explore ventures — clean, modern UI showcasing plots and projects.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#buy">Buy Plot</a>
+            <a class="btn ghost" href="#sell">Sell Plot</a>
+            <a class="btn" href="#search">Search Plot</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <img src="https://via.placeholder.com/600x380?text=Land+Hero" alt="land hero" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick feature tiles for Home -->
+    <section class="features">
+      <div class="container">
+        <div class="features-grid">
+          <a class="feature-card" href="#buy">
+            <div class="feature-icon">🏷️</div>
+            <h3>Buy Plot</h3>
+            <p>Explore verified listings with clear pricing and area details.</p>
+          </a>
+          <a class="feature-card" href="#sell">
+            <div class="feature-icon">📤</div>
+            <h3>Sell Plot</h3>
+            <p>List your plot with photos, venture details and contact info.</p>
+          </a>
+          <a class="feature-card" href="#search">
+            <div class="feature-icon">🔎</div>
+            <h3>Search Plot</h3>
+            <p>Filter by location, area, price and venture to find matches fast.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search & Filters -->
+    <section id="search" class="search-section">
+      <div class="container">
+        <h2>Search Plots</h2>
+        <form id="filterForm" class="filters" onsubmit="return false;">
+          <div class="row">
+            <label>
+              Location
+              <input type="text" id="filterLocation" placeholder="Enter location" />
+            </label>
+            <label>
+              Venture
+              <select id="filterVenture">
+                <option value="">Any</option>
+              </select>
+            </label>
+            <label>
+              Area Min (sq yards)
+              <input type="number" id="filterAreaMin" min="0" placeholder="0" />
+            </label>
+            <label>
+              Area Max (sq yards)
+              <input type="number" id="filterAreaMax" min="0" placeholder="5000" />
+            </label>
+          </div>
+
+          <div class="row">
+            <label>
+              Price Min
+              <input type="number" id="filterPriceMin" min="0" placeholder="0" />
+            </label>
+            <label>
+              Price Max
+              <input type="number" id="filterPriceMax" min="0" placeholder="5000000" />
+            </label>
+            <label>
+              &nbsp;
+              <button id="applyFilters" class="btn primary">Apply Filters</button>
+            </label>
+            <label>
+              &nbsp;
+              <button id="clearFilters" class="btn ghost">Clear</button>
+            </label>
+          </div>
+        </form>
+
+        <div id="results" class="results-grid">
+          <!-- Plot cards rendered here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Buy & Sell placeholders -->
+    <section id="buy" class="info-section">
+      <div class="container">
+        <h2>Buy Plot</h2>
+        <p>Browse available plots in the search section above. Click "Buy / Contact" to reach out to the seller.</p>
+      </div>
+    </section>
+
+    <section id="sell" class="info-section">
+      <div class="container">
+        <h2>Sell Plot</h2>
+        <p>Want to sell a plot? Add details and contact info (this demo uses dummy data).</p>
+      </div>
+    </section>
+
+    <!-- Ventures -->
+    <section id="ventures" class="ventures-section">
+      <div class="container">
+        <h2>Ventures</h2>
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-status="New">New Launches</button>
+          <button class="tab" data-status="Ongoing">Ongoing Ventures</button>
+          <button class="tab" data-status="Upcoming">Upcoming Ventures</button>
+        </div>
+        <div id="venturesList" class="ventures-list">
+          <!-- Ventures rendered here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact modal -->
+  <div id="contactModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal">×</button>
+      <h3>Contact Seller</h3>
+      <p id="modalPlotInfo">...</p>
+      <form id="contactForm" onsubmit="return false;">
+        <label>
+          Your name
+          <input type="text" id="contactName" required />
+        </label>
+        <label>
+          Your email
+          <input type="email" id="contactEmail" required />
+        </label>
+        <label>
+          Message
+          <textarea id="contactMessage">I'm interested in this plot. Please contact me.</textarea>
+        </label>
+        <div class="modal-actions">
+          <button id="sendContact" class="btn primary">Send</button>
+          <button id="cancelContact" class="btn ghost">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <strong>Landify</strong> 2026</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
